@@ -1,6 +1,6 @@
 #!/bin/bash -e
 #
-# Copyright (c) 2016-2017 Robert Nelson <robertcnelson@gmail.com>
+# Copyright (c) 2016-2018 Robert Nelson <robertcnelson@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -84,7 +84,7 @@ set_wlan_0_mac () {
 			printf '\x'${offset4}'' | dd conv=notrunc of=${firmware} bs=1 seek=$((0x00000004)) status=none
 			printf '\x'${offset5}'' | dd conv=notrunc of=${firmware} bs=1 seek=$((0x00000003)) status=none
 
-			echo "Writing mac address ${wlan_0_mac} to file ${firmware}"
+			echo "Writing mac address: [${wlan_0_mac}] to file: ${firmware}"
 
 			if [ -f /boot/initrd.img-`uname -r` ] ; then
 				echo "updating: /boot/initrd.img-`uname -r`"
