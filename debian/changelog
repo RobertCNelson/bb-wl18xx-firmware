@@ -1,0 +1,5 @@
+bb-wl18xx-firmware (1.20170829-0rcnee2~jessie+20180104) jessie; urgency=low
+
+  * Rebuild for repos.rcn-ee.com
+
+ -- Robert Nelson <robertcnelson@gmail.com>  Thu, 04 Jan 2018 11:39:42 -0600
