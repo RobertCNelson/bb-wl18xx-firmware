@@ -329,9 +329,11 @@ start_hostapd () {
 		echo "logger_syslog=-1" >> ${wfile}
 		echo "logger_syslog_level=2" >> ${wfile}
 
+		echo "${log} /usr/sbin/hostapd -B /tmp/hostapd-wl18xx.conf"
 		/usr/sbin/hostapd -B /tmp/hostapd-wl18xx.conf
 	else
 		if [ -f /etc/hostapd.conf ] ; then
+			echo "${log} /usr/sbin/hostapd -B /etc/hostapd.conf"
 			/usr/sbin/hostapd -B /etc/hostapd.conf
 		else
 			echo "${log} error, no /etc/hostapd.conf"
