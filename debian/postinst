@@ -46,7 +46,9 @@ echo_default () {
 	echo "# USE_GENERATED_DNSMASQ: use generated version of /etc/dnsmasq.d/SoftAp0; set to no so user can modify /etc/dnsmasq.d/SoftAp0" >> /etc/default/bb-wl18xx
 	echo "USE_GENERATED_DNSMASQ=yes" >> /etc/default/bb-wl18xx
 	echo "" >> /etc/default/bb-wl18xx
-	echo "# USE_GENERATED_HOSTAPD: use generated version of /etc/hostapd.conf; set to no so user can modify /etc/hostapd.conf" >> /etc/default/bb-wl18xx
+	echo "# USE_GENERATED_HOSTAPD: use generated version of /etc/hostapd.conf;" >> /etc/default/bb-wl18xx
+	echo "#set to no so user can modify /etc/hostapd.conf directly" >> /etc/default/bb-wl18xx
+	echo "#set to yes (default); Read Only version of /etc/hostapd.conf; which is stored at /tmp/hostapd-wl18xx.conf" >> /etc/default/bb-wl18xx
 	echo "USE_GENERATED_HOSTAPD=yes" >> /etc/default/bb-wl18xx
 	echo "" >> /etc/default/bb-wl18xx
 	echo "# USE_APPENDED_SSID: appends mac address after SSID (aka -WXYZ, BeagleBone-WXYZ)" >> /etc/default/bb-wl18xx
@@ -70,7 +72,9 @@ else
 		echo "# USE_GENERATED_DNSMASQ: use generated version of /etc/dnsmasq.d/SoftAp0; set to no so user can modify /etc/dnsmasq.d/SoftAp0" >> /etc/default/bb-wl18xx
 		echo "USE_GENERATED_DNSMASQ=yes" >> /etc/default/bb-wl18xx
 		echo "" >> /etc/default/bb-wl18xx
-		echo "# USE_GENERATED_HOSTAPD: use generated version of /etc/hostapd.conf; set to no so user can modify /etc/hostapd.conf" >> /etc/default/bb-wl18xx
+		echo "# USE_GENERATED_HOSTAPD: use generated version of /etc/hostapd.conf;" >> /etc/default/bb-wl18xx
+		echo "#set to no so user can modify /etc/hostapd.conf directly" >> /etc/default/bb-wl18xx
+		echo "#set to yes (default); Read Only version of /etc/hostapd.conf; which is stored at /tmp/hostapd-wl18xx.conf" >> /etc/default/bb-wl18xx
 		echo "USE_GENERATED_HOSTAPD=yes" >> /etc/default/bb-wl18xx
 		echo "" >> /etc/default/bb-wl18xx
 	fi
