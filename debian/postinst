@@ -37,7 +37,7 @@ echo_default () {
 	echo "USE_WL18XX_POWER_MANAGMENT=off" >> /etc/default/bb-wl18xx
 	echo "" >> /etc/default/bb-wl18xx
 
-	echo "# USE_PERSONAL_SSID: set custom ssid" >> /etc/default/bb-wl18xx
+	echo "# USE_PERSONAL_SSID: set custom ssid (8 character minimum)" >> /etc/default/bb-wl18xx
 	echo "USE_PERSONAL_SSID=\"BeagleBone\"" >> /etc/default/bb-wl18xx
 	echo "" >> /etc/default/bb-wl18xx
 	echo "# USE_PERSONAL_PASSWORD: set ssid password" >> /etc/default/bb-wl18xx
