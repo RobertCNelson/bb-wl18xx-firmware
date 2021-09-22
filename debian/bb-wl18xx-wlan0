@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 #
 # Copyright (c) 2016-2020 Robert Nelson <robertcnelson@gmail.com>
 #
@@ -52,7 +52,9 @@ cylon_leds () {
 				STATE=2
 				;;
 			esac
-			/bin/sleep 0.1
+			#bashsism...
+			#possible bashism in bb-wl18xx-wlan0 line 45 (sleep only takes one integer):
+			sleep 0.1
 		done
 	fi
 }
